@@ -141,7 +141,7 @@ class RiskEngine {
       );
     }
 
-    final score = indicators.fold<int>(0, (sum, item) => sum + item.points).clamp(0, 100);
+    final score = indicators.fold<int>(0, (sum, item) => sum + item.points).clamp(0, 100).toInt();
     final level = _classify(score);
 
     return AnalysisResult(
