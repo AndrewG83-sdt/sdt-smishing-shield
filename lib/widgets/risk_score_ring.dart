@@ -17,7 +17,7 @@ class RiskScoreRing extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TweenAnimationBuilder<double>(
-      tween: Tween(begin: 0, end: score.clamp(0, 100) / 100),
+      tween: Tween(begin: 0.0, end: score.clamp(0, 100).toDouble() / 100.0),
       duration: const Duration(milliseconds: 900),
       curve: Curves.easeOutCubic,
       builder: (context, value, _) {
